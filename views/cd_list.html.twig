@@ -9,6 +9,8 @@
         <ul>
         {% for cd in cds %}
             <li> {{ cd.getAlbum }} </li>
+            <li> {{ cd.getArtist }} </li>
+
             {% endfor %}
         </ul>
     {% endif %}

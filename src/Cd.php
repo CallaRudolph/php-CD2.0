@@ -3,10 +3,14 @@
     class Cd
     {
         private $album;
-        function __construct($album)
+        private $artist;
+
+        function __construct($album, $artist)
         {
             $this->album = $album;
+            $this->artist = $artist;
         }
+
         function setAlbum($new_album)
         {
             $this->album = $new_album;
@@ -15,6 +19,16 @@
         function getAlbum()
         {
             return $this->album;
+        }
+
+        function setArtist($new_artist)
+        {
+            $this->artist = $new_artist;
+        }
+
+        function getArtist()
+        {
+            return $this->artist;
         }
 
         function save()
