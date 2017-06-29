@@ -9,8 +9,13 @@
         <h1>NOTHING</h1>
     {% else %}
         {% for booger in cd %}
-            <p>{{ booger.getArtist }}</p>
-            <p>{{ booger.getAlbum }}</p>
+        <ul>
+            <li><h3>{{ booger.getArtist }}</h3></li>
+            <ul>
+                <li>{{ booger.getAlbum }}</li>
+            </ul>
+
+        </ul>
         {% endfor %}
     {% endif %}
     <a href='/list'>Home</a>
