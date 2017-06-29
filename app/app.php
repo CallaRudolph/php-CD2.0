@@ -29,6 +29,9 @@
         return $app['twig']->render('cd_list.html.twig', array('cds' => Cd::getAll()));
     });
 
+    $app->post("/delete", function() use ($app) {
+        return $app['twig']->render('cd_delete.html.twig', array('cds' => Cd::deleteAll()));
+    });
 
     return $app;
 ?>

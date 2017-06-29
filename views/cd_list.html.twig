@@ -8,12 +8,17 @@
     {% if cds is not empty %}
         <ul>
         {% for cd in cds %}
-            <li> {{ cd.getAlbum }} </li>
-            <li> {{ cd.getArtist }} </li>
-
-            {% endfor %}
+            <li><h3> {{ cd.getAlbum }} </h3></li>
+                <ul>
+                    <li> {{ cd.getArtist }} </li>
+                </ul>
+        {% endfor %}
         </ul>
-    {% endif %}
-    <a href='/'>Add a new one</a>
+        {% endif %}
+        <a href='/'>Add a new one</a>
+
+        <form action='/delete' method='post'>
+            <button type='submit'>BURN THEM</button>
+        </form>
 </body>
 </html>

@@ -40,6 +40,11 @@
         {
             return $_SESSION['list_of_cds'];
         }
+
+        static function deleteAll()
+        {
+            return $_SESSION['list_of_cds'] = array();
+        }
     }
 
 
