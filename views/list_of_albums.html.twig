@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>Library</title>
+</head>
+<body>
+    <h1>Wow!</h1>
+    <p>Look at all the stuff you have.</p>
+    {% if cds is not empty %}
+        <ul>
+            {% for cd in cds %}
+            <li> {{ cd.getAlbum }} </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
