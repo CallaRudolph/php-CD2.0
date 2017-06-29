@@ -1,0 +1,6 @@
+//     $cd_matching_search = array();
+//     foreach ($cds as $cd) {
+//         if ($cd->findIt($_POST['search'])){
+//             array_push($cd_matching_search, $cd);
+//         }
+//     }

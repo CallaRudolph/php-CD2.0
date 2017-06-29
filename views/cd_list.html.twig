@@ -1,24 +1,32 @@
 <html>
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <title>List of them all</title>
 </head>
 <body>
-    <h1>Wow!</h1>
-    <p>Look at all yr stuff.</p>
-    {% if cds is not empty %}
+    <div class="container">
+        <h1>Wow!</h1>
+        <p>Look at all yer stuff.</p>
+        {% if cds is not empty %}
         <ul>
-        {% for cd in cds %}
+            {% for cd in cds %}
             <li><h3> {{ cd.getAlbum }} </h3></li>
-                <ul>
-                    <li> {{ cd.getArtist }} </li>
-                </ul>
-        {% endfor %}
+            <ul>
+                <li> {{ cd.getArtist }} </li>
+            </ul>
+            {% endfor %}
         </ul>
         {% endif %}
         <a href='/'>Add a new one</a>
-
+        <br><br>
+        <form action='/search'>
+            <label for="search">Enter an artist</label>
+            <input type="text" name="search" id="search">
+            <button type='submit'>Search for eet!</button>
+        </form>
         <form action='/delete' method='post'>
             <button type='submit'>BURN THEM</button>
         </form>
+    </div>
 </body>
 </html>
