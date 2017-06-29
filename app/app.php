@@ -19,6 +19,16 @@
         return $app['twig']->render('cd.html.twig', array('cds' => Cd::getAll()));
     });
 
+    $app->post("/cd_create", function() use ($app) {
+        $album = new Cd($_POST['album']);
+        $album->save();
+        return $app['twig']->render('create.html.twig', array('cds' => $album));
+    });
+
+    $app->get("/list", function() use ($app) {
+        return $app['twig']->render('cd_list.html.twig', array('cds' => Cd::getAll()));
+    });
+
 
     return $app;
 ?>

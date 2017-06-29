@@ -1,16 +1,17 @@
 <html>
 <head>
-    <title>Library</title>
+    <title>List of them all</title>
 </head>
 <body>
     <h1>Wow!</h1>
-    <p>Look at all the stuff you have.</p>
+    <p>Look at all yr stuff.</p>
     {% if cds is not empty %}
         <ul>
-            {% for cd in cds %}
+        {% for cd in cds %}
             <li> {{ cd.getAlbum }} </li>
             {% endfor %}
         </ul>
     {% endif %}
+    <a href='/'>Add a new one</a>
 </body>
 </html>
